@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add
+            id="Adeelq_CoreLogFileReader::CoreLogFileReader"
+            title="View Log Files"
+            module="Adeelq_CoreLogFileReader"
+            sortOrder="100"
+            action="adeelq_logs/logs"
+            resource="Adeelq_CoreLogFileReader::CoreLogFileReader"
+            parent="Adeelq_CoreModule::Reports"
+        />
+    </menu>
+</config>

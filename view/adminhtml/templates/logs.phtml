@@ -1,0 +1,64 @@
+<?php
+use Adeelq\CoreLogFileReader\Block\Adminhtml\Logs;
+/** @var Logs $block */
+?>
+<div class="admin__data-grid-wrap admin__data-grid-wrap-static">
+    <table class="data-grid" id="adeelq-list-log-files">
+        <thead>
+            <tr>
+                <th class="data-grid-th">
+                        <span>
+                            <?= __('File Name') ?>
+                        </span>
+                </th>
+                <th class="data-grid-th">
+                        <span>
+                            <?= __('File Size') ?>
+                        </span>
+                </th>
+                <th class="data-grid-th">
+                        <span>
+                            <?= __('Last Accessed') ?>
+                        </span>
+                </th>
+                <th class="data-grid-th">
+                        <span>
+                            <?= __('Last Modified') ?>
+                        </span>
+                </th>
+                <th class="data-grid-th">
+                        <span>
+                            <?= __('Action') ?>
+                        </span>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php foreach ($block->getLogHelper()->getLogFiles() as $logFile): ?>
+                <tr>
+                    <td>
+                        <?= $block->escaper->escapeHtml($logFile['base_name']) ?>
+                    </td>
+                    <td>
+                        <?= $block->escaper->escapeHtml($logFile['file_size']) ?>
+                    </td>
+                    <td>
+                        <?= $block->escaper->escapeHtml($logFile['last_accessed']) ?>
+                    </td>
+                    <td>
+                        <?= $block->escaper->escapeHtml($logFile['last_modified']) ?>
+                    </td>
+                    <td>
+                        <a href="<?= $block->escaper->escapeUrl($logFile['action_view']) ?>" target="_self">
+                            <?= __('View') ?>
+                        </a>
+                        <span> / </span>
+                        <a href="<?= $block->escaper->escapeUrl($logFile['action_download']) ?>" target="_self">
+                            <?= __('Download') ?>
+                        </a>
+                    </td>
+                </tr>
+            <?php endforeach; ?>
+        </tbody>
+    </table>
+</div>

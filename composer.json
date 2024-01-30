@@ -1,0 +1,30 @@
+{
+    "name": "adeelq/magento2-log-viewer-downloader",
+    "description": "A module that shows list of all log files. User can view the logs file in the viewer as well as download it.",
+    "type": "magento2-module",
+    "version": "1.0.0",
+    "license": "MPL-2.0",
+    "authors": [
+        {
+            "name": "Adeel Qamar",
+            "email": "adeel1qamar@gmail.com"
+        }
+    ],
+    "require": {
+        "adeelq/magento2-core-module": ">=1.0"
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://repo.magento.com/"
+        }
+    ],
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Adeelq\\CoreLogFileReader\\": ""
+        }
+    }
+}

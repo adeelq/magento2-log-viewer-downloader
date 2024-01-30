@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <css src="Adeelq_CoreLogFileReader::css/styles.css"/>
+    </head>
+    <body>
+        <referenceContainer name="content">
+            <block
+                class="Adeelq\CoreLogFileReader\Block\Adminhtml\Logs"
+                name="adeelq_logs_viewer_file"
+                template="Adeelq_CoreLogFileReader::content.phtml"
+            />
+        </referenceContainer>
+    </body>
+</page>

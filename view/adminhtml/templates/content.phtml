@@ -1,0 +1,7 @@
+<?php
+use Adeelq\CoreLogFileReader\Block\Adminhtml\Logs;
+/** @var Logs $block */
+?>
+<div class="adeelq-logs-container">
+    <pre class="adeelq-logs-pre"><?= $block->escaper->escapeHtml($block->getLogHelper()->getLogFileContent()); ?></pre>
+</div>
